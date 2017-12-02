@@ -1,0 +1,11 @@
+Package: IkeaScraper
+Type: Package
+Title: Scrape images from the ikea website
+Version: 0.1.0
+Author: Longhow Lam
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Scrape images from the ikea website
+    Scrape images from the ikea website.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
