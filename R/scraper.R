@@ -73,7 +73,7 @@ searchIkeaOnePage = function(iter, baselink, query, imagedir)
     type4 = ifelse(is.na(breadCrumbs[[1]][4]), breadCrumbs[[1]][3], breadCrumbs[[1]][4])
     type3 = ifelse(is.na(breadCrumbs[[1]][3]), breadCrumbs[[1]][2], breadCrumbs[[1]][3])
 
-    ## extract price
+    ## extract the price
     price = rvest::html_nodes(
       out,
       "#price1"
