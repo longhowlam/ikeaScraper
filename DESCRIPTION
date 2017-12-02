@@ -9,3 +9,8 @@ Description: Scrape images from the ikea website
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+    dplyr,
+    futile.logger,
+    rvest,
+    stringr
