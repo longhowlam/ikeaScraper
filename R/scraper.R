@@ -80,10 +80,21 @@ searchIkeaOnePage = function(iter, baselink, query, imagedir)
     ) %>% rvest::html_text() %>%
       cleanstring()
 
+    ## name
+    name = rvest::html_nodes(
+      out,
+      "#name"
+    ) %>%
+      rvest::html_text() %>%
+        cleanstring()
+
+
+
+
     ## add all results to output data frame
     outframe = bind_rows(
       outframe,
-      data.frame(link,type3, type4,price, imagefile, stringsAsFactors = FALSE)
+      data.frame(link,name, type3, type4, price, imagefile, stringsAsFactors = FALSE)
     )
   }
   futile.logger::flog.info("search page %s processed", iter)
