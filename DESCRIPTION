@@ -1,7 +1,7 @@
 Package: IkeaScraper
 Type: Package
 Title: Scrape images from the ikea website
-Version: 0.1.1
+Version: 0.1.2
 Author: Longhow Lam
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: Scrape images from the ikea website

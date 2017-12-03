@@ -77,6 +77,9 @@ searchIkeaOnePage = function(iter, baselink, query, imagedir)
       stringr::str_split("/")
     ## Neem 3e breadcrumb als ie niet leeg is anders 2e
     type3 = ifelse(is.na(breadCrumbs[[1]][3]), breadCrumbs[[1]][2], breadCrumbs[[1]][3])
+    type2 = ifelse(is.na(breadCrumbs[[1]][2]), breadCrumbs[[1]][1], breadCrumbs[[1]][2])
+    type = breadCrumbs[[1]][2]
+
 
     ## extract the price
     price = rvest::html_nodes(
