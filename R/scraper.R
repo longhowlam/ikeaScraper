@@ -16,6 +16,12 @@ searchIkea = function(query, imagedir = "images"){
 
   NPAGES = pages %>% stringr::str_extract("\\d+") %>% as.numeric() %>% max()
 
+  ## create directory for images if it does not already exists
+  if(!file.exists(imagedir))
+  {
+    dir.create(imagedir)
+  }
+
   futile.logger::flog.info("npages %s", NPAGES)
 
   futile.logger::flog.info("loop over pages")
