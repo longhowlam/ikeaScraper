@@ -78,8 +78,6 @@ searchIkeaOnePage = function(iter, baselink, query, imagedir)
     ## Neem 3e breadcrumb als ie niet leeg is anders 2e
     type3 = ifelse(is.na(breadCrumbs[[1]][3]), breadCrumbs[[1]][2], breadCrumbs[[1]][3])
     type2 = ifelse(is.na(breadCrumbs[[1]][2]), breadCrumbs[[1]][1], breadCrumbs[[1]][2])
-    type = breadCrumbs[[1]][2]
-
 
     ## extract the price
     price = rvest::html_nodes(
@@ -99,7 +97,7 @@ searchIkeaOnePage = function(iter, baselink, query, imagedir)
     ## add all results to output data frame
     outframe = bind_rows(
       outframe,
-      data.frame(link,name, type3, price, imagefile, stringsAsFactors = FALSE)
+      data.frame(link,name, type2, type3, price, imagefile, stringsAsFactors = FALSE)
     )
   }
   futile.logger::flog.info("search page %s processed", iter)
